@@ -1,7 +1,7 @@
 import pygame, sys
 from pygame.locals import *
 
-pygame.init() # this always needs to be called after importing pygame
+pygame.init() # this always needs to be called after importing pygame.
 Display_Window = pygame.display.set_mode((400, 300)) # sets up the main display window for the game.
 pygame.display.set_caption('Block Get') # sets up caption on the top-left of the game window
 
