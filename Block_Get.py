@@ -14,7 +14,10 @@ yellow = (255, 255, 0)
 player = pygame.draw.rect(Display_Window, green, (200, 150, 25, 25))
 treasure = pygame.draw.rect(Display_Window, blue, (350, 200, 20, 20))
 goal = pygame.draw.rect(Display_Window, yellow, (85, 200, 20, 20))
-
+#Setup character attributes
+x = 50
+y = 50
+vel = 5
 #Setup Walls
 wall = pygame.draw.rect(Display_Window, gray, (150, 75, 25, 25))
 wall_l_long_top = pygame.draw.rect(Display_Window, gray, (0, 0, 400, 25)) # (x, y, length, width)
@@ -30,4 +33,19 @@ while True: # PRIMARY GAME LOOP. The loop's condition is "True", but the loop wi
         if event.type == QUIT:
             pygame.quit()
             sys.exit()
-    pygame.display.update()
+    #Setup keyboard input for movement
+    keys = pygame.key.get_pressed()
+
+    if keys[pygame.K_a]:
+        x -= vel
+    if keys[pygame.K_d]:
+        x += vel
+    if keys[pygame.K_w]:
+        y -= vel
+    if keys[pygame.K_s]:
+        y += vel
+    #Draw 'player' onto the screen.
+
+    #Draw 'background' color.
+    #Display_Window.fill((0, 0, 0))
+    pygame.display.update() #This allows objects to be drawn onto the screen.
