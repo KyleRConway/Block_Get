@@ -74,7 +74,7 @@ while True: # PRIMARY GAME LOOP. The loop's condition is "True", but the loop wi
             if event.key == K_RIGHT or event.key == K_d:
                 player.right = False
             if event.key == K_UP or event.key == K_w:
-                palyer.up = False
+                player.up = False
             if event.key == K_DOWN or event.key == K_s:
                 player.down = False
     #Setup keyboard input for movement
